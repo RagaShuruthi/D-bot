@@ -1,0 +1,96 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #b2f7ef, #90d6c5);
+    color: #05445e;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #05445e;
+  }
+  
+  /* Header Section */
+  .header {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(to right, #56cfe1, #80ffdb);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 20px 20px;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .header p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0;
+  }
+  
+  /* Main Section */
+  main {
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .plan-section {
+    margin-bottom: 2rem;
+    background: #e0fbfc;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .plan-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    padding-left: 2rem;
+    position: relative;
+  }
+  
+  li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    color: #028090;
+  }
+  
+  /* Footer Section */
+  .footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(to right, #028090, #80ffdb);
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 2rem;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    body {
+      padding: 0 1rem;
+    }
+  }
+  

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diet and Exercise Plan</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='normalweight.css') }}">
+</head>
+<body>
+  <header class="header">
+    <h1>YOU ARE AT YOUR NORMAL WEIGHT</h1>
+    <p>Maintain your healthy lifestyle with these tips!</p>
+    <nav>
+      <button onclick="scrollToSection('diet-section')">Diet</button>
+      <button onclick="scrollToSection('exercise-section')">Exercise</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Diet Section -->
+    <section id="diet-section" class="plan-section">
+      <h2>Recommended Diet Plan</h2>
+      <div class="meal-container">
+        <h3>Breakfast</h3>
+        <p>
+          Option 1: 2 Idlies or 2 dosa and one egg with vegetables (as your wish) and a glass of milk.<br>
+          Option 2: A plate of upma (150g) or kichadi (150g) and one egg and a glass of fruit juice.<br>
+          Option 3: 2 Chappathies with paneer or chicken and a protein shake (dry fruits, banana, and milk).<br>
+          Option 4: A ragi dosa or other millet dosa (2), a fruit, and sprouts.
+        </p>
+      </div>
+      <div class="meal-container">
+        <h3>Lunch</h3>
+        <p>
+          Option 1: A bowl of white rice with sambar or any curry with a cup of vegetables.<br>
+          Option 2: A bowl of white rice with chicken and a piece of fish.<br>
+          Option 3: Red rice with veggie curry and an egg.<br>
+          Option 4: Wheat roti with chicken or veggies and your favorite fruit juice.
+        </p>
+      </div>
+      <div class="meal-container">
+        <h3>Dinner</h3>
+        <p>
+          Option 1: 2 Idlies or 2 dosa with one egg and a glass of milk.<br>
+          Option 2: A plate of upma (150g) or kichadi (150g) with one egg and fruit juice.<br>
+          Option 3: 2 Chappathies with paneer or chicken and a protein shake.<br>
+          Option 4: A ragi dosa or other millet dosa (2), a fruit, and sprouts.
+        </p>
+      </div>
+    </section>
+
+    <!-- Exercise Section -->
+    <section id="exercise-section" class="plan-section">
+      <h2>Exercise Recommendations</h2>
+      <ul class="exercise-plan">
+        <li>30 minutes of moderate-intensity cardio (e.g., jogging or swimming).</li>
+        <li>Include yoga sessions twice a week for flexibility and mindfulness.</li>
+        <li>Strength training 2-3 times a week (bodyweight exercises or light weights).</li>
+        <li>Aim for at least 8,000-10,000 steps per day.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Consistency is the key to maintaining your health! 🌟</p>
+  </footer>
+
+  <script>
+    function scrollToSection(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
