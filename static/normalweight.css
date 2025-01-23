@@ -1,127 +1,90 @@
-/* General Styles */
+/* General Body Styling */
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
   margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom right, #add8e6, #98fb98); /* Light blue to light green */
-  color: #05445e;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #a8ff78, #78ffd6);
+  color: #2c3e50;
 }
 
-h1, h2, h3 {
-  text-align: center;
-  color: #05445e;
-}
-
-/* Header Section */
+/* Header Styling */
 .header {
+  width: 100%;
   text-align: center;
-  padding: 2rem;
-  background: linear-gradient(to right, #90ee90, #87ceeb); /* Light green to light blue */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 0 0 20px 20px;
+  padding: 20px 0;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .header h1 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   margin: 0;
-}
-
-.header p {
-  font-size: 1.2rem;
-  margin: 0.5rem 0 1rem;
 }
 
 nav {
-  margin-top: 1rem;
+  position: absolute;
+  top: 15px;
+  right: 20px;
 }
 
 nav button {
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  margin: 0 0.5rem;
-  color: #fff;
-  background-color: #05445e;
+  background: linear-gradient(to right, #43e97b, #38f9d7);
   border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  color: white;
+  font-size: 0.9rem;
   border-radius: 5px;
   cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 nav button:hover {
-  background-color: #32cd32;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Main Section */
-main {
-  padding: 2rem;
-  margin: 0 auto;
-  max-width: 800px;
-}
-
+/* Main Section Styling */
 .plan-section {
-  margin-bottom: 2rem;
-  background: #e0f7fa; /* Very light blue */
-  padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: none; /* Hide sections by default */
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  background: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .plan-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .meal-container {
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  background: #ffffff;
-  border: 1px solid #87ceeb;
+  margin: 15px 0;
+  padding: 15px;
+  border: 2px solid #43e97b;
   border-radius: 10px;
+  background: #f9f9f9;
+  transition: background-color 0.3s ease;
 }
 
-.meal-container h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
+.meal-container:hover {
+  background: #e7f9e9;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+.meal-container ul {
+  text-align: left;
 }
 
-li {
-  font-size: 1.1rem;
-  margin: 0.5rem 0;
-  padding-left: 2rem;
-  position: relative;
+.meal-container li {
+  margin: 10px 0;
 }
 
-li::before {
-  content: "✔️";
-  position: absolute;
-  left: 0;
-  font-size: 1.2rem;
-  color: #32cd32; /* Lime green */
-}
-
-/* Footer Section */
-.footer {
+/* Motivation Section */
+footer.motivation {
   text-align: center;
-  padding: 1.5rem;
-  background: linear-gradient(to right, #32cd32, #87ceeb); /* Lime green to sky blue */
-  color: #ffffff;
-  font-weight: bold;
-  margin-top: 2rem;
-  border-radius: 20px 20px 0 0;
-}
-
-.footer p {
-  margin: 0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  body {
-    padding: 0 1rem;
-  }
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 1.2rem;
 }

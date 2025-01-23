@@ -7,45 +7,46 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='normalweight.css') }}">
 </head>
 <body>
+  <!-- Header Section -->
   <header class="header">
     <h1>YOU ARE AT YOUR NORMAL WEIGHT</h1>
-    <p>Maintain your healthy lifestyle with these tips!</p>
     <nav>
-      <button onclick="scrollToSection('diet-section')">Diet</button>
-      <button onclick="scrollToSection('exercise-section')">Exercise</button>
+      <button onclick="showSection('diet-section')">Diet</button>
+      <button onclick="showSection('exercise-section')">Exercise</button>
     </nav>
   </header>
 
+  <!-- Main Content -->
   <main>
     <!-- Diet Section -->
     <section id="diet-section" class="plan-section">
       <h2>Recommended Diet Plan</h2>
       <div class="meal-container">
         <h3>Breakfast</h3>
-        <p>
-          Option 1: 2 Idlies or 2 dosa and one egg with vegetables (as your wish) and a glass of milk.<br>
-          Option 2: A plate of upma (150g) or kichadi (150g) and one egg and a glass of fruit juice.<br>
-          Option 3: 2 Chappathies with paneer or chicken and a protein shake (dry fruits, banana, and milk).<br>
-          Option 4: A ragi dosa or other millet dosa (2), a fruit, and sprouts.
-        </p>
+        <ul>
+          <li>Option 1: 2 Idlies or 2 dosa, one egg, vegetables, and a glass of milk.</li>
+          <li>Option 2: A plate of upma (150g) or kichadi (150g), one egg, and fruit juice.</li>
+          <li>Option 3: 2 Chappathies with paneer or chicken and a protein shake.</li>
+          <li>Option 4: A bowl of oats with nuts and a glass of buttermilk.</li>
+        </ul>
       </div>
       <div class="meal-container">
         <h3>Lunch</h3>
-        <p>
-          Option 1: A bowl of white rice with sambar or any curry with a cup of vegetables.<br>
-          Option 2: A bowl of white rice with chicken and a piece of fish.<br>
-          Option 3: Red rice with veggie curry and an egg.<br>
-          Option 4: Wheat roti with chicken or veggies and your favorite fruit juice.
-        </p>
+        <ul>
+          <li>Option 1: A bowl of white rice with sambar or curry with vegetables.</li>
+          <li>Option 2: A bowl of white rice with chicken and a piece of fish.</li>
+          <li>Option 3: Red rice with veggie curry and an egg.</li>
+          <li>Option 4: Millet rice with lentil soup and steamed veggies.</li>
+        </ul>
       </div>
       <div class="meal-container">
         <h3>Dinner</h3>
-        <p>
-          Option 1: 2 Idlies or 2 dosa with one egg and a glass of milk.<br>
-          Option 2: A plate of upma (150g) or kichadi (150g) with one egg and fruit juice.<br>
-          Option 3: 2 Chappathies with paneer or chicken and a protein shake.<br>
-          Option 4: A ragi dosa or other millet dosa (2), a fruit, and sprouts.
-        </p>
+        <ul>
+          <li>Option 1: 2 Idlies or 2 dosa, one egg, and a glass of milk.</li>
+          <li>Option 2: A plate of upma (150g) or kichadi (150g) and fruit juice.</li>
+          <li>Option 3: 2 Chappathies with paneer or chicken and a protein shake.</li>
+          <li>Option 4: A bowl of vegetable soup with a multigrain bread slice.</li>
+        </ul>
       </div>
     </section>
 
@@ -61,14 +62,26 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <p>Consistency is the key to maintaining your health! 🌟</p>
+  <!-- Motivation Section -->
+  <footer class="motivation">
+    <p>Stay consistent, and you'll achieve your goals! 🌟</p>
   </footer>
 
+  <!-- JavaScript for Smooth Scrolling and Section Toggling -->
   <script>
-    function scrollToSection(sectionId) {
-      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    function showSection(sectionId) {
+      document.querySelectorAll('.plan-section').forEach(section => {
+        section.style.display = 'none'; // Hide all sections
+      });
+      const sectionToShow = document.getElementById(sectionId);
+      sectionToShow.style.display = 'block'; // Show the selected section
+      sectionToShow.scrollIntoView({ behavior: 'smooth' }); // Scroll into view
     }
+
+    // Initial state: Show Diet section by default
+    document.addEventListener('DOMContentLoaded', () => {
+      showSection('diet-section');
+    });
   </script>
 </body>
 </html>
